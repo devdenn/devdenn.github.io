@@ -2,37 +2,39 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+<!---
+Please read this!
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+Before opening a new issue, make sure to search for keywords in the issues
+and verify the issue you're about to submit isn't a duplicate.
+--->
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+### Summary
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+<!-- Summarize the bug encountered concisely. -->
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+### Steps to reproduce
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+<!-- Describe how one can reproduce the issue - this is very important. Please use an ordered list. -->
 
-**Additional context**
-Add any other context about the problem here.
+### What is the current *bug* behavior?
+
+<!-- Describe what actually happens. -->
+
+### What is the expected *correct* behavior?
+
+<!-- Describe what you should see instead. -->
+
+### Relevant logs and/or screenshots
+
+<!-- Paste any relevant logs - please use code blocks (```) to format console output, logs, and code
+ as it's tough to read otherwise. -->
+
+### Possible fixes
+
+<!-- If you can, link to the line of code that might be responsible for the problem. -->
