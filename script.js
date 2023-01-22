@@ -4,10 +4,8 @@
      Date .......: 2023-01-22
 */
 document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener("load", function () {
-        setTimeout(function () {
-            // This hides the address bar:
-            window.scrollTo(0, 1);
-        }, 0);
+    var checkbox = document.getElementById('checkbox');
+    checkbox.addEventListener('change', function () {
+        document.body.classList.toggle('dark');
     });
 });
