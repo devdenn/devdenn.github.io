@@ -161,3 +161,7 @@ footer a {
     font-size: 4em;
     font-style: italic;
 }
+
+footer {
+    margin-bottom: 7em;
+}
