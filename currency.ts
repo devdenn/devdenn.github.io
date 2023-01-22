@@ -1,15 +1,27 @@
 /*
      Website  ...: Currency Calculator
-     Author .....: Denis Paul
+     Author .....: devdenn
      Date .......: 2022-11-09
 
      website for wbs
 */
 
-/* warning: not always updated, before use, call getCurrencies */
 let currency1: string;
 let currency2: string;
 let rate: number;
+
+import * as fs from 'fs';
+
+fs.readFile("db.json", "utf-8", (err, data) => {
+    if (err) {
+        console.log("error");
+    } else {
+        const dataJSON = JSON.parse(data);
+        for (let i of dataJSON) {
+            console.log(i.status);
+        }
+    }
+});
 
 function getCurrencies() {
     currency1 = (document.getElementById('currency1') as HTMLInputElement).value;
@@ -99,7 +111,7 @@ function calc(event) {
 }
 
 /* Wait for the DOM */
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('swap').addEventListener('click', (event) => {
         swap(event);
     })

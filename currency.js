@@ -1,14 +1,28 @@
+"use strict";
 /*
      Website  ...: Currency Calculator
-     Author .....: Denis Paul
+     Author .....: devdenn
      Date .......: 2022-11-09
 
      website for wbs
 */
-/* warning: not always updated, before use, call getCurrencies */
+Object.defineProperty(exports, "__esModule", { value: true });
 var currency1;
 var currency2;
 var rate;
+var fs = require("fs");
+fs.readFile("db.json", "utf-8", function (err, data) {
+    if (err) {
+        console.log("error");
+    }
+    else {
+        var dataJSON = JSON.parse(data);
+        for (var _i = 0, dataJSON_1 = dataJSON; _i < dataJSON_1.length; _i++) {
+            var i = dataJSON_1[_i];
+            console.log(i.status);
+        }
+    }
+});
 function getCurrencies() {
     currency1 = document.getElementById('currency1').value;
     currency2 = document.getElementById('currency2').value;
@@ -55,7 +69,7 @@ function calc(event) {
     document.getElementById('table').innerHTML = "\n    <table class=\"t\">\n        <tr>\n            <th>".concat(currency1, "</th>\n            <th>").concat(currency2, "</th>\n        </tr>\n        ") + table1 + "\n    </table>\n    <table class=\"t\">\n        <tr>\n            <th>".concat(currency1, "</th>\n            <th>").concat(currency2, "</th>\n        </tr>\n        ") + table2 + "\n    </table>\n    <table class=\"t\">\n        <tr>\n            <th>".concat(currency1, "</th>\n            <th>").concat(currency2, "</th>\n        </tr>\n        ") + table3 + "\n    </table>";
 }
 /* Wait for the DOM */
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('swap').addEventListener('click', function (event) {
         swap(event);
     });
@@ -63,3 +77,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
         calc(event);
     });
 });
+//# sourceMappingURL=currency.js.map
