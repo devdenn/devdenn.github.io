@@ -19,6 +19,11 @@ body {
     background-color: var(--dark);
     color: var(--white);
     text-size-adjust: none;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 body.dark {
@@ -36,7 +41,15 @@ h1 {
 }
 
 .min summary {
-    font-size: 5em;
+    font-size: 4em;
+}
+
+.min p {
+    font-size: 3em;
+}
+
+li {
+    font-size: 3em;
 }
 
 .img {
@@ -101,22 +114,22 @@ details[open] > summary {
 }
 
 .label {
-    width: 200px;
-    height: 70px;
+    width: 170px;
+    height: 50px;
     background-color: var(--white);
     display: flex;
     border-radius:50px;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    top: -0.5em;
     transform: scale(1.5);
-    margin-left: 1em;
+    margin-left: 2em;
+    top: 5px;
 }
 
 .ball {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     background-color: var(--dark);
     position: absolute;
     top: 5px;
@@ -127,7 +140,7 @@ details[open] > summary {
 
 /*  target the element after the label*/
 .checkbox:checked + .label .ball{
-    transform: translateX(130px);
+    transform: translateX(120px);
 }
 
 .tr {
@@ -137,6 +150,7 @@ details[open] > summary {
 .elem_foot {
     display: inline-block;
     margin-left: 5em;
+    margin-top: 1.5em;
 }
 
 footer a {
