@@ -148,39 +148,33 @@ li a {
     }
 }
 
-.collapsible {
+.min {
+    margin-left: 10px;
+}
+
+details {
     background-color: var(--grey);
     color: var(--bg);
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 0.8em;
-    display: flex;
-    align-items: center;
-    float: left;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-.collapsible:before {
+
+details summary::before {
     content: "+";
+    font-size: 1.2em;
     margin-right: 10px;
+    transition: transform 0.2s ease-out;
 }
-.active:before {
+
+details[open] summary::before {
     content: "-";
-}
-.active, .collapsible:hover {
-    background-color: #888888;
+    transform: rotate(45deg);
 }
 
-.content {
-    padding: 5px 0 5px 10px;
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
     display: none;
-    overflow: hidden;
-    background-color: var(--bg);
-    font-size: 0.7em;
-}
-
-button {
-    margin-bottom: 5px;
 }
