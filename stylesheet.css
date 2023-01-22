@@ -13,19 +13,16 @@ html {
 }
 
 body {
-    font-size: 2em;
+    font-size: 100%;
     font-weight: bold;
     background-color: var(--dark);
     color: var(--white);
+    text-size-adjust: none;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 5.55em;
     margin-bottom: 0.5em;
-}
-
-p {
-    font-size: 0.5em;
 }
 
 .img {
@@ -59,20 +56,39 @@ details {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-details summary::before {
-    content: "+";
-    margin-right: 10px;
-    transition: transform 0.2s ease-out;
-}
-
-details[open] summary::before {
-    content: "-";
-    transform: rotate(45deg);
-}
-
 details > summary {
-    list-style: none;
+    list-style-type: none;
 }
+
 details > summary::-webkit-details-marker {
     display: none;
+}
+
+details > summary::before {
+    content: '+';
+    margin-right: 15px;
+}
+
+details[open] > summary::before {
+    content: '-';
+}
+
+details {
+    padding: 0.5rem;
+}
+
+details[open] > summary {
+    margin-bottom: 0.5rem;
+}
+
+.main summary {
+    font-size: 3em;
+}
+
+.min summary {
+    font-size: 2.2em;
+}
+
+p {
+    font-size: 1em;
 }
