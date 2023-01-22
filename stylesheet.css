@@ -1,6 +1,7 @@
 :root {
     --bg: lavenderblush;
     --grey: #555555;
+    --bgdark: #ffe7f1;
 }
 
 * {
@@ -20,7 +21,12 @@ body {
 
 h1 {
     font-size: 3em;
-    margin-bottom: 0;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: normal;
 }
 
 label {
@@ -28,13 +34,21 @@ label {
 }
 
 .inputtext {
-    padding-top: 0.2em;
-    margin-bottom: 0.5em;
-    background-color: var(--bg);
+    padding-top: 0;
+    background-color: transparent;
     border-top: none;
     border-left: none;
     border-right: none;
     font-size: 0.8em;
+    width: 7em;
+}
+
+.small {
+    width: 5em;
+}
+
+.big {
+    width: 25em;
 }
 
 .inputtext:focus {
@@ -48,94 +62,125 @@ label {
     padding: 0.2em 1em;
     text-align: center;
     transition-duration: 150ms;
-    font-size: 0.8em;
-    margin-bottom: 1em;
+    font-size: 0.7em;
+    margin: 1em 1em 1em 0;
 }
 
 .inputbutton:hover {
     background-color: var(--bg);
     color: var(--grey);
-    border: 2px solid var(--grey);
+}
+
+.noHover {
+    opacity: 0.1;
 }
 
 .inputs, .buttons {
-    display: inline-block;
+    display: inline-flex;
 }
 
-.buttons {
+.img:hover {
+    opacity: 0.2;
 }
 
-.t {
-    margin-top: 0.1em;
-    margin-left: 0.1em;
-    float: left;
+.img {
+    width: 2.5em;
+    margin-top: 0.4em;
+    margin-bottom: 0;
+    padding: 0;
+    transition: 150ms;
 }
 
-th, td {
-    border: 1px solid;
+.centering {
+    text-align: center;
+    font-size: 0.7em;
 }
 
-table {
-    border-collapse: collapse;
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: grey;
+    opacity: 0.4; /* Firefox */
 }
 
-th, td {
-    padding: 0.1em 0.5em 0.1em 0.5em;
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: grey;
+}
+
+::-ms-input-placeholder {    /* Microsoft Edge */
+    color: grey;
+}
+
+a {
+    font-size: 0.5em;
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+    --bg-h: 2px;
+    background: linear-gradient(0deg, var(--grey), var(--grey)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    padding-bottom: 2px;
+}
+
+a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+li a {
     font-size: 0.8em;
-    border-color: var(--grey);
-
 }
 
-th {
+.hidden {
+    opacity: 0;
+    transition: 1s;
+}
+
+@media screen and (max-width: 1380px) {
+    .inputtext {
+        width: 7em;
+    }
+
+    .small {
+        width: 5em;
+    }
+
+    .big {
+        width: 10em;
+    }
+}
+
+.collapsible {
     background-color: var(--grey);
     color: var(--bg);
-    font-weight: normal;
-}
-
-td:hover {
-    font-weight: bold;
-    /* Uncomment this to comply 100% with the tasks
-    background: #FFDDB5;*/
-}
-
-.ten {
-    background: #D7F5FF;
-}
-
-.ten:nth-child(odd) {
-    background: #E1F9FF;
-}
-
-.ten:hover {
-    background: #BBF0FF;
-}
-
-.hundred {
-    background: #E7D7FF;
-}
-
-.hundred:nth-child(odd) {
-    background: #EEE1FF;
-}
-
-.hundred:hover {
-    background: #E3C5FF;
-}
-
-.thousand {
-    background: #D7FFEB;
-}
-
-.thousand:nth-child(odd) {
-    background: #E1FFF1;
-}
-
-.thousand:hover {
-    background: #C0FFE2;
-}
-
-.border {
-    height: 10em;
-    padding: 1em;
+    cursor: pointer;
+    padding: 18px;
     width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    float: left;
+}
+.collapsible:before {
+    content: "+";
+    margin-right: 10px;
+}
+.active:before {
+    content: "-";
+}
+.active, .collapsible:hover {
+    background-color: #888888;
+}
+
+.content {
+    padding: 5px 0 5px 10px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--bg);
+    font-size: 0.7em;
+}
+
+button {
+    margin-bottom: 5px;
 }
