@@ -15,7 +15,7 @@ html {
 
 body {
     font-size: 100%;
-    font-weight: bold;
+    font-weight: normal;
     background-color: var(--dark);
     color: var(--white);
     text-size-adjust: none;
@@ -26,50 +26,17 @@ body.dark {
     --white: #1b1a1f;
 }
 
-.checkbox {
-    opacity: 0;
-    position: absolute;
-}
-
-.label {
-    width: 50px;
-    height: 26px;
-    background-color:#111;
-    display: flex;
-    border-radius:50px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    position: relative;
-    transform: scale(1.5);
-}
-
-.ball {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    border-radius: 50%;
-    transition: transform 0.2s linear;
-}
-
-/*  target the element after the label*/
-.checkbox:checked + .label .ball{
-    transform: translateX(24px);
-}
-
-.tr {
-    position: absolute;
-    bottom: 1em;
-    right: 1em;
-    font-size: 2em;
-}
-
 h1 {
-    font-size: 5.55em;
+    font-size: 10em;
     margin-bottom: 0.5em;
+}
+
+.main summary {
+    font-size: 7em;
+}
+
+.min summary {
+    font-size: 5em;
 }
 
 .img {
@@ -128,14 +95,51 @@ details[open] > summary {
     margin-bottom: 0.5rem;
 }
 
-.main summary {
-    font-size: 3em;
+.checkbox {
+    opacity: 0;
+    position: absolute;
 }
 
-.min summary {
-    font-size: 2.2em;
+.label {
+    width: 200px;
+    height: 70px;
+    background-color: var(--white);
+    display: flex;
+    border-radius:50px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: -0.5em;
+    transform: scale(1.5);
+    margin-left: 1em;
 }
 
-p {
-    font-size: 1em;
+.ball {
+    width: 60px;
+    height: 60px;
+    background-color: var(--dark);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+/*  target the element after the label*/
+.checkbox:checked + .label .ball{
+    transform: translateX(130px);
+}
+
+.tr {
+    font-size: 4em;
+}
+
+.elem_foot {
+    display: inline-block;
+    margin-left: 5em;
+}
+
+footer a {
+    font-size: 4em;
+    font-style: italic;
 }
