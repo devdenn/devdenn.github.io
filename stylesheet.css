@@ -1,7 +1,6 @@
 :root {
-    --bg: lavenderblush;
-    --grey: #555555;
-    --bgdark: #ffe7f1;
+    --dark: #1b1a1f;
+    --white: #FFFFFF;
 }
 
 * {
@@ -9,78 +8,24 @@
 }
 
 html {
-    font-size: 1.5em;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
 body {
-    font-size: 1.5em;
-    background-color: var(--bg);
+    font-size: 2em;
+    font-weight: bold;
+    background-color: var(--dark);
+    color: var(--white);
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 0.5em;
 }
 
-h3 {
-    font-size: 1em;
-    font-weight: normal;
-}
-
-label {
-    font-size: 0.9em;
-}
-
-.inputtext {
-    padding-top: 0;
-    background-color: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    font-size: 0.8em;
-    width: 7em;
-}
-
-.small {
-    width: 5em;
-}
-
-.big {
-    width: 25em;
-}
-
-.inputtext:focus {
-    outline: none;
-}
-
-.inputbutton {
-    background-color: var(--grey);
-    border: 2px solid var(--grey);
-    color: var(--bg);
-    padding: 0.2em 1em;
-    text-align: center;
-    transition-duration: 150ms;
-    font-size: 0.7em;
-    margin: 1em 1em 1em 0;
-}
-
-.inputbutton:hover {
-    background-color: var(--bg);
-    color: var(--grey);
-}
-
-.noHover {
-    opacity: 0.1;
-}
-
-.inputs, .buttons {
-    display: inline-flex;
-}
-
-.img:hover {
-    opacity: 0.2;
+p {
+    font-size: 0.5em;
 }
 
 .img {
@@ -91,31 +36,12 @@ label {
     transition: 150ms;
 }
 
-.centering {
-    text-align: center;
-    font-size: 0.7em;
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: grey;
-    opacity: 0.4; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: grey;
-}
-
-::-ms-input-placeholder {    /* Microsoft Edge */
-    color: grey;
-}
-
 a {
-    font-size: 0.5em;
     text-decoration: none;
     color: inherit;
     line-height: 1;
     --bg-h: 2px;
-    background: linear-gradient(0deg, var(--grey), var(--grey)) no-repeat right bottom / 0 var(--bg-h);
+    background: linear-gradient(0deg, var(--dark), var(--dark)) no-repeat right bottom / 0 var(--bg-h);
     transition: background-size 350ms;
     padding-bottom: 2px;
 }
@@ -125,45 +51,16 @@ a:where(:hover, :focus-visible) {
     background-position-x: left;
 }
 
-li a {
-    font-size: 0.8em;
-}
-
-.hidden {
-    opacity: 0;
-    transition: 1s;
-}
-
-@media screen and (max-width: 1380px) {
-    .inputtext {
-        width: 7em;
-    }
-
-    .small {
-        width: 5em;
-    }
-
-    .big {
-        width: 10em;
-    }
-}
-
-.min {
-    margin-left: 10px;
-}
-
 details {
-    background-color: var(--grey);
-    color: var(--bg);
+    background-color: var(--dark);
+    color: var(--white);
     padding: 20px;
     margin: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    font-size: 0.8em;
 }
 
 details summary::before {
     content: "+";
-    font-size: 1.2em;
     margin-right: 10px;
     transition: transform 0.2s ease-out;
 }
