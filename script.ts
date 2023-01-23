@@ -9,18 +9,29 @@ document.addEventListener("DOMContentLoaded", () => {
     checkbox.addEventListener('change', ()=>{
         document.body.classList.toggle('dark');
     })
+    const randomizer = document.getElementById('random');
+    if(randomizer !== null)
+        randomizer.addEventListener('click', ()=>{
+            const random_content = document.getElementById("random-content") as HTMLElement;
 
-    document.getElementById('random').addEventListener('click', ()=>{
-        const random_content = document.getElementById("random-content") as HTMLElement;
+            var type = (<HTMLInputElement>document.getElementById("types")).value;
 
-        var elements = document.getElementsByClassName("min");
+            var elements = document.getElementsByClassName(type);
 
-        var rand = randomIntFromInterval(0, elements.length-1);
+            if(elements.length === 0){
+                random_content.innerHTML =
+                    "<details class='min'> <summary>Found nothing</summary> " +
+                    "</details>";
+                return;
+            }
 
-        random_content.innerHTML =
-            "<details class='min'> " + elements[rand].innerHTML +
-            "</details>";
-    })
+
+            var rand = randomIntFromInterval(0, elements.length-1);
+
+            random_content.innerHTML =
+                "<details class='min'> " + elements[rand].innerHTML +
+                "</details>";
+        })
 });
 
 
