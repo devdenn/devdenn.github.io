@@ -81,8 +81,11 @@ details {
     background-color: var(--dark);
     color: var(--white);
     padding: 20px;
-    margin: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+}
+
+.main details  {
+    margin: 20px;
 }
 
 .min[open] {
@@ -212,4 +215,8 @@ select {
 }
 hr {
     border: 1px solid var(--white);
+}
+
+.second {
+    font-size: 0.8em;
 }
