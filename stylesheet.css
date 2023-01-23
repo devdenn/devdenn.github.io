@@ -165,3 +165,21 @@ footer a {
 footer {
     margin-bottom: 7em;
 }
+
+input, select {
+    font-size: 3.5em;
+    background-color: var(--dark);
+    border: 2px solid var(--white);
+    color: var(--white);
+    width: 49%;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    transition-duration: 150ms;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+input:hover {
+    background-color: var(--white);
+    color: var(--dark);
+}
