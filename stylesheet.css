@@ -183,3 +183,28 @@ input:hover {
     background-color: var(--white);
     color: var(--dark);
 }
+
+.selectdiv {
+    display: inline;
+    position: relative;
+}
+
+.selectdiv:after{
+    content: '<';
+    font: 5em "Consolas", monospace;
+    color: var(--white);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+
+    bottom:-25px;
+    right: 25px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
